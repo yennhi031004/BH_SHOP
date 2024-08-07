@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Đơn Giản</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        /* Thêm CSS để chỉnh kích thước ảnh */
+        .slides img {
+            width: 50%; /* Bạn có thể thay đổi giá trị này theo nhu cầu */
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="img/hinh1.webp" style="width:25%">
+            <div class="text">Sản Phẩm 1</div>
+        </div>
+
+        <div class="slides fade">
+            <img src="img/hinh2.webp" style="width:25%">
+            <div class="text">Sản Phẩm 2</div>
+        </div>
+
+        <div class="slides fade">
+            <img src="img/hinh3.webp" style="width:25%">
+            <div class="text">Sản Phẩm 3</div>
+        </div>
+
+        <!-- Nút điều khiển trước và sau -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <br>
+
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <nav>
+        <a href="../layout/index.html">Trang Chủ</a>
+        <a href="../layout/product.html">Sản phẩm</a>
+        <a href="../layout/about.html">Giới Thiệu</a>
+        <a href="../layout/contact.html">Liên Hệ</a>
+    </nav>
+    <main>
+        <div class="container">
+            <h2>Sản Phẩm Mới</h2>
+            <div class="product-box">
+                <div class="product">
+                    <img src="img/hinh1.webp" alt="" />
+                    <h3>Sản Phẩm 1</h3>
+                    <p>Mô tả sản phẩm 1.</p>
+                </div>
+                <div class="product">
+                    <img src="img/hinh2.webp" alt="" />
+                    <h3>Sản Phẩm 2</h3>
+                    <p>Mô tả sản phẩm 2.</p>
+                </div>
+                <div class="product">
+                    <img src="img/hinh3.webp" alt="" />
+                    <h3>Sản Phẩm 3</h3>
+                    <p>Mô tả sản phẩm 3.</p>
+                </div>
+                <div class="product">
+                    <img src="img/hinh4.webp" alt="" />
+                    <h3>Sản Phẩm 4</h3>
+                    <p>Mô tả sản phẩm 4.</p>
+                </div>
+                <div class="product">
+                    <img src="img/hinh5.webp" alt="" />
+                    <h3>Sản Phẩm 5</h3>
+                    <p>Mô tả sản phẩm 5.</p>
+                </div>
+                <div class="product">
+                    <img src="img/hinh6.webp" alt="" />
+                    <h3>Sản Phẩm 6</h3>
+                    <p>Mô tả sản phẩm 6.</p>
+                </div>
+            </div>
+            <h2>Sản Phẩm Bán Chạy</h2>
+            <div class="product-box">
+                <div class="product">
+                    <img src="img/hinh1.webp" alt="" />
+                    <h3>Sản Phẩm 1</h3>
+                    <p>Mô tả sản phẩm 1.</p>
+                </div>
+                <div class="product">
+                    <img src="img/hinh2.webp" alt="" />
+                    <h3>Sản Phẩm 2</h3>
+                    <p>Mô tả sản phẩm 2.</p>
+                </div>
+                <div class="product">
+                    <img src="img/hinh3.webp" alt="" />
+                    <h3>Sản Phẩm 3</h3>
+                    <p>Mô tả sản phẩm 3.</p>
+                </div>
+                <div class="product">
+                    <img src="img/hinh4.webp" alt="" />
+                    <h3>Sản Phẩm 4</h3>
+                    <p>Mô tả sản phẩm 4.</p>
+                </div>
+                <div class="product">
+                    <img src="img/hinh5.webp" alt="" />
+                    <h3>Sản Phẩm 5</h3>
+                    <p>Mô tả sản phẩm 5.</p>
+                </div>
+                <div class="product">
+                    <img src="img/hinh6.webp" alt="" />
+                    <h3>Sản Phẩm 6</h3>
+                    <p>Mô tả sản phẩm 6.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>&copy; 2023 Website Đơn Giản</footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Thay đổi hình ảnh sau mỗi 2 giây
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    </script>
+</body>
+
+</html>
